@@ -21,13 +21,13 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Screenshot
 
-![](./Screenshot .png)
+![](./Screenshot.jpg)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Bensolve/recipe-page-main)
+- Live Site URL: [Add live site URL here](https://recipe-page-main-solve.netlify.app/)
 
 ## My process
 
