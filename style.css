@@ -61,14 +61,17 @@ body {
     margin: 0 auto;
     border-radius: 1rem;
     overflow: hidden;
-    /* Optional if image radius causes overflow */ }
+    /* Optional if image radius causes overflow */
+}
+
 .recipe__image {
     width: 100vw;
     display: block;
     object-fit: cover;
     margin-left: calc(50% - 50vw);
     /* breakout from container */
-    border-radius: 0 0 1rem 1rem; }
+    border-radius: 0 0 1rem 1rem;
+}
 
 .recipe__body {
     padding: 2rem clamp(1rem, 5vw, 3rem);
@@ -97,7 +100,7 @@ body {
 .label {
     font-weight: var(--fw-semibold);
     /* or bold */
-   padding-right: 0.2rem;
+    padding-right: 0.2rem;
 
     min-width: 6ch;
     /* align times visually */
@@ -239,8 +242,13 @@ body {
 
 .recipe__nutrition-table th,
 .recipe__nutrition-table td {
-    padding-block: 0.75rem;
-    padding-inline: 0;
+
+    /* Logical padding for RTL & vertical text support - uncomment when needed */
+    /* padding-block: 0.75rem; */
+    /* padding-inline: 0; */
+
+    padding: 0.75rem 0;
+    /* shorthand for LTR */
 }
 
 .recipe__nutrition-table th {
@@ -250,7 +258,7 @@ body {
 }
 
 .recipe__nutrition-table td {
-  
+
     font-weight: var(--fw-bold);
     color: var(--clr-brown-800);
 }
