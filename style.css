@@ -17,7 +17,6 @@
     --ff-body: "Outfit", sans-serif;
 
     --fs-base: 1rem;
-    /* 16px */
     --fw-regular: 400;
     --fw-semibold: 600;
     --fw-bold: 700;
@@ -34,17 +33,14 @@
     padding: 0;
 }
 
-
 html {
     font-size: 100%;
-    /* 16px default */
     scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--ff-body);
     font-size: clamp(1rem, 2.5vw, 1.125rem);
-    /* 16px - 18px */
     line-height: 1.7;
     background-color: var(--clr-stone-100);
     color: var(--clr-stone-900);
@@ -52,8 +48,8 @@ body {
 }
 
 /* ====================
-   Layout
-==================== */
+     Layout
+  ==================== */
 
 .recipe {
     background-color: var(--clr-white);
@@ -61,7 +57,6 @@ body {
     margin: 0 auto;
     border-radius: 1rem;
     overflow: hidden;
-    /* Optional if image radius causes overflow */
 }
 
 .recipe__image {
@@ -69,7 +64,6 @@ body {
     display: block;
     object-fit: cover;
     margin-left: calc(50% - 50vw);
-    /* breakout from container */
     border-radius: 0 0 1rem 1rem;
 }
 
@@ -80,10 +74,8 @@ body {
 .recipe__title {
     font-family: var(--ff-heading);
     font-size: clamp(1.75rem, 5vw, 2rem);
-    /* scales between 28px - 32px */
     color: var(--clr-stone-900);
     margin-block: clamp(1rem, 3vw, 2rem);
-
 }
 
 .recipe__description {
@@ -94,22 +86,18 @@ body {
 .recipe__content {
     display: grid;
     gap: clamp(1rem, 2vw, 2.5rem);
-    /* fluid gaps 16px to 40px */
 }
 
 .label {
     font-weight: var(--fw-semibold);
-    /* or bold */
     padding-right: 0.2rem;
-
     min-width: 6ch;
-    /* align times visually */
     color: var(--clr-stone-900);
 }
 
 /* ====================
-   Lists
-==================== */
+     Lists
+  ==================== */
 
 .recipe__list,
 .recipe__steps,
@@ -117,14 +105,11 @@ body {
     display: grid;
     gap: 0.5rem;
     font-size: clamp(1rem, 2.5vw, 1.125rem);
-    padding-inline-start: 1.25rem;
-}
-
-.recipe__time-list {
-    color: var(--clr-stone-600);
 }
 
 .recipe__list {
+    list-style: disc;
+    padding-inline-start: 1.25rem;
     color: var(--clr-stone-900);
 }
 
@@ -135,7 +120,6 @@ body {
 .recipe__steps {
     list-style: decimal;
     padding-inline-start: 1.5rem;
-    gap: 1rem;
     color: var(--clr-stone-900);
 }
 
@@ -144,15 +128,21 @@ body {
     color: var(--clr-brown-800);
 }
 
+.recipe__time-list {
+    list-style: disc;
+    padding-inline-start: 1.25rem;
+    color: var(--clr-stone-600);
+    font-weight: var(--fw-regular);
+}
+
 /* ====================
-   Typography
-==================== */
+     Typography
+  ==================== */
 
 .recipe__heading {
     font-family: var(--ff-heading);
     font-size: clamp(1.5rem, 4vw, 1.75rem);
     color: var(--clr-brown-800);
-
     margin-block: clamp(1rem, 3vw, 2rem);
 }
 
@@ -166,14 +156,13 @@ body {
 
 .section-divider {
     border-bottom: 1px solid var(--clr-stone-150);
-    /* faint divider */
     padding-bottom: clamp(1rem, 3vw, 2rem);
     margin-bottom: clamp(1.5rem, 4vw, 3rem);
 }
 
 /* ====================
-   Prep Time Section
-==================== */
+     Prep Time Section
+  ==================== */
 
 .recipe__prep-time {
     background-color: var(--clr-rose-50);
@@ -182,44 +171,9 @@ body {
     margin-bottom: 2rem;
 }
 
-
-
-.recipe__time-list {
-    list-style: disc;
-    color: var(--clr-stone-600);
-    font-weight: var(--fw-regular); }
-
-.recipe__list {
-    list-style: disc;
-    padding-inline-start: 1.25rem;
-    color: var(--clr-stone-900);
-    display: grid;
-    gap: 0.5rem;
-    font-size: clamp(1rem, 2.5vw, 1.125rem);
-}
-
-.recipe__list li::marker {
-    color: var(--clr-brown-800);
-}
-
-
-.recipe__steps {
-    list-style: decimal;
-    padding-inline-start: 1.5rem;
-    display: grid;
-    gap: 1rem;
-    color: var(--clr-stone-900);
-    font-size: clamp(1rem, 2.5vw, 1.125rem);
-}
-
-.recipe__steps li::marker {
-    font-weight: var(--fw-bold);
-    color: var(--clr-brown-800);
-}
-
 /* ====================
-   Nutrition Table
-==================== */
+     Nutrition Table
+  ==================== */
 
 .recipe__nutrition-table {
     width: 100%;
@@ -238,13 +192,7 @@ body {
 
 .recipe__nutrition-table th,
 .recipe__nutrition-table td {
-
-    /* Logical padding for RTL & vertical text support - uncomment when needed */
-    /* padding-block: 0.75rem; */
-    /* padding-inline: 0; */
-
     padding: 0.75rem 0;
-    /* shorthand for LTR */
 }
 
 .recipe__nutrition-table th {
@@ -254,7 +202,6 @@ body {
 }
 
 .recipe__nutrition-table td {
-
     font-weight: var(--fw-bold);
     color: var(--clr-brown-800);
 }
@@ -263,10 +210,13 @@ body {
     border-bottom: 1px solid var(--clr-stone-150);
 }
 
+/* ====================
+     Responsive
+  ==================== */
+
 @media (min-width: 48rem) {
     .recipe {
         padding-inline: clamp(1rem, 5vw, 3rem);
-        /* Add padding to the card */
     }
 
     .recipe__image {
@@ -278,7 +228,6 @@ body {
 
     .recipe__body {
         padding-inline: 0;
-        /* Remove horizontal padding now that .recipe has it */
         padding-block: 2rem;
     }
 }
