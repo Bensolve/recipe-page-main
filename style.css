@@ -111,9 +111,9 @@ body {
    Lists
 ==================== */
 
-.recipe__time-list,
 .recipe__list,
-.recipe__steps {
+.recipe__steps,
+.recipe__time-list {
     display: grid;
     gap: 0.5rem;
     font-size: clamp(1rem, 2.5vw, 1.125rem);
@@ -185,13 +185,9 @@ body {
 
 
 .recipe__time-list {
-    padding-left: 1.25rem;
     list-style: disc;
     color: var(--clr-stone-600);
-    font-weight: var(--fw-regular);
-    display: grid;
-    gap: 0.5rem;
-}
+    font-weight: var(--fw-regular); }
 
 .recipe__list {
     list-style: disc;
@@ -267,7 +263,7 @@ body {
     border-bottom: 1px solid var(--clr-stone-150);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .recipe {
         padding-inline: clamp(1rem, 5vw, 3rem);
         /* Add padding to the card */
